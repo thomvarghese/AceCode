@@ -1,0 +1,7 @@
+C:\Tom\Learn\Learnings\WordBreak\bin\Debug\WordBreak.exe.config
+C:\Tom\Learn\Learnings\WordBreak\bin\Debug\WordBreak.exe
+C:\Tom\Learn\Learnings\WordBreak\bin\Debug\WordBreak.pdb
+C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.csproj.CoreCompileInputs.cache
+C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.exe
+C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.pdb
+C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.csprojAssemblyReference.cache
