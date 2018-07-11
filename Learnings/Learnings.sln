@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleInGraph", "CycleInGrap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeProblems", "TreeProblems\TreeProblems.csproj", "{EDF0FF43-45E5-4D7B-9150-5EB61D27B280}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadDependencies", "LoadDependencies\LoadDependencies.csproj", "{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EDF0FF43-45E5-4D7B-9150-5EB61D27B280}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF0FF43-45E5-4D7B-9150-5EB61D27B280}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF0FF43-45E5-4D7B-9150-5EB61D27B280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
