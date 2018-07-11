@@ -30,36 +30,36 @@ namespace TreeProblems
             return result;
         }
 
-        public static IList<IList<int>> LevelOrderReverse(TreeNode root)
-        {
-            IList<IList<int>> result = new List<IList<int>>(); // LinkedList - addFirst(), add(), remove() and removeLast()
-            RecursiveLevelOrderBottom(root, 0, result);
-            return result;
-        }
+        //public static IList<IList<int>> LevelOrderReverse(TreeNode root)
+        //{
+        //    IList<IList<int>> result = new List<IList<int>>(); // LinkedList - addFirst(), add(), remove() and removeLast()
+        //    RecursiveLevelOrderBottom(root, 0, result);
+        //    return result;
+        //}
 
-        private static void RecursiveLevelOrderBottom(TreeNode root, int height, IList<IList<int>> result)
-        {
-            if (root == null)
-            { // Base case
-                return;
-            }
+        //private static void RecursiveLevelOrderBottom(TreeNode root, int height, IList<IList<int>> result)
+        //{
+        //    if (root == null)
+        //    { // Base case
+        //        return;
+        //    }
 
-            if (height == result.Count)
-            { // Create a new list for current level
-                result.Add(new List<int>());
-            }
-            else if (height < result.Count)
-            { // Move the list for current level from tail to head
-                result.addFirst(result.removeLast());
-            }
+        //    if (height == result.Count)
+        //    { // Create a new list for current level
+        //        result.Add(new List<int>());
+        //    }
+        //    else if (height < result.Count)
+        //    { // Move the list for current level from tail to head
+        //        result.addFirst(result.removeLast());
+        //    }
 
-            /* Postorder traversal */
-            recursiveLevelOrderBottom(root.left, height + 1, result); // Recursive steps
-            recursiveLevelOrderBottom(root.right, height + 1, result);
-            // Add root value to the list for current level, then move it from head to tail since we are about to backtrack
-            result.peek().add(root.val);
-            result.add(result.remove());
-        }
+        //    /* Postorder traversal */
+        //    recursiveLevelOrderBottom(root.left, height + 1, result); // Recursive steps
+        //    recursiveLevelOrderBottom(root.right, height + 1, result);
+        //    // Add root value to the list for current level, then move it from head to tail since we are about to backtrack
+        //    result.peek().add(root.val);
+        //    result.add(result.remove());
+        //}
 
     }
 }

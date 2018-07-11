@@ -5,3 +5,10 @@ C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.csproj.CoreCompileInputs.ca
 C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.exe
 C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.pdb
 C:\Tom\Learn\Learnings\WordBreak\obj\Debug\WordBreak.csprojAssemblyReference.cache
+C:\Git\AceCode\Learnings\WordBreak\bin\Debug\WordBreak.exe.config
+C:\Git\AceCode\Learnings\WordBreak\bin\Debug\WordBreak.exe
+C:\Git\AceCode\Learnings\WordBreak\bin\Debug\WordBreak.pdb
+C:\Git\AceCode\Learnings\WordBreak\obj\Debug\WordBreak.csprojAssemblyReference.cache
+C:\Git\AceCode\Learnings\WordBreak\obj\Debug\WordBreak.csproj.CoreCompileInputs.cache
+C:\Git\AceCode\Learnings\WordBreak\obj\Debug\WordBreak.exe
+C:\Git\AceCode\Learnings\WordBreak\obj\Debug\WordBreak.pdb
