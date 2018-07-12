@@ -20,6 +20,7 @@ namespace LoadDependencies
             foreach (var v in res)
                 Console.Write(v + "  ");
             Console.ReadLine();
+
         }
     }
 
@@ -48,24 +49,7 @@ namespace LoadDependencies
         {
             List<string> result = new List<string>();
             Dictionary<string, Node> allNodes = new Dictionary<string, Node>();
-            var graph = new Graph();
-            foreach (var lib in libraries)
-            {
-                if (!allNodes.ContainsKey(lib[0]))
-                {                    
-                    allNodes.Add(lib[0], new Node(lib[0]));
-                }
-                Node node = allNodes[lib[0]];
-                for (int i = 1; i < lib.Count; i++)
-                {
-                    node.Dependencies.Add(lib[i]);
-                    var dependentNode = new Node(lib[i]);
-                    if (!allNodes.ContainsKey(dependentNode.Name))
-                        allNodes.Add(dependentNode.Name, dependentNode);                   
-                }
-                
-                graph.nodes.Add(node);
-            }
+            Graph graph = CreateGraphAndAllNodes(libraries, allNodes);
 
             foreach (var node in graph.nodes)
             {
@@ -74,6 +58,29 @@ namespace LoadDependencies
             return result;
         }
 
+        private static Graph CreateGraphAndAllNodes(List<List<string>> libraries, Dictionary<string, Node> allNodes)
+        {
+            var graph = new Graph();
+            foreach (var lib in libraries)
+            {
+                if (!allNodes.ContainsKey(lib[0]))
+                {
+                    allNodes.Add(lib[0], new Node(lib[0]));
+                }
+                Node node = allNodes[lib[0]];
+                for (int i = 1; i < lib.Count; i++)
+                {
+                    node.Dependencies.Add(lib[i]);
+                    var dependentNode = new Node(lib[i]);
+                    if (!allNodes.ContainsKey(dependentNode.Name))
+                        allNodes.Add(dependentNode.Name, dependentNode);
+                }
+
+                graph.nodes.Add(node);
+            }
+
+            return graph;
+        }
 
         private static void LoadDeps(Node node, List<string> result, Dictionary<string, Node> allNodes)
         {
@@ -91,6 +98,29 @@ namespace LoadDependencies
             if (!result.Contains(node.Name))
                 result.Add(node.Name);
         }
+
+        private static bool HasCycleDfs(Node node, Dictionary<string, Node> allNodes, HashSet<Node> visitedNodes, HashSet<Node> completedNodes)
+        {
+
+            if (visitedNodes.Contains(node))
+            {
+                if (completedNodes.Contains(node))
+                    return false;
+                return true;
+            }
+            visitedNodes.Add(node);
+
+            foreach (var dep in node.Dependencies)
+            {
+                var dependentNode = allNodes[dep];
+                if (HasCycleDfs(dependentNode, allNodes, visitedNodes, completedNodes))
+                    return true;
+            }
+
+            completedNodes.Add(node);
+            return false;
+        }
+
     }    
    
 }
