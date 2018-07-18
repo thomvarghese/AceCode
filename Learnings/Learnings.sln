@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeProblems", "TreeProblem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadDependencies", "LoadDependencies\LoadDependencies.csproj", "{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixPath", "MatrixPath\MatrixPath.csproj", "{FE987F6A-347D-43EE-8E98-BD8B2EF1EA5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furniture", "Furniture\Furniture.csproj", "{C2E7E3DD-0577-4FB4-86FF-CB53834DAD90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40FE9312-02AA-40F5-B3B0-FF5CC2A5342D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE987F6A-347D-43EE-8E98-BD8B2EF1EA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE987F6A-347D-43EE-8E98-BD8B2EF1EA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE987F6A-347D-43EE-8E98-BD8B2EF1EA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE987F6A-347D-43EE-8E98-BD8B2EF1EA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E7E3DD-0577-4FB4-86FF-CB53834DAD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E7E3DD-0577-4FB4-86FF-CB53834DAD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E7E3DD-0577-4FB4-86FF-CB53834DAD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E7E3DD-0577-4FB4-86FF-CB53834DAD90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
