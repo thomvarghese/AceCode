@@ -38,17 +38,21 @@ namespace TreeProblems
              * */
             //rightside = 3,4,10,11,13,17
             //leftside = 3,2,1,11,13,15
-            
+
+            Console.WriteLine("****RightSide View ****");
             var rightValues = TreeSideView.RightSideViewDfs(root);
             foreach (var i in rightValues)
-                Console.WriteLine(i + ", ");
+                Console.WriteLine(i + " ");
             Console.ReadLine();
 
+
+            Console.WriteLine("****LeftSide View ****");
             var leftValues = TreeSideView.LeftSideViewDfs(root);
             foreach (var i in leftValues)
                 Console.WriteLine(i + ", ");
             Console.ReadLine();
 
+            Console.WriteLine("****Level Order****");
             var levels = LevelOrderTraversal.LevelOrder(root);
             foreach (var level in levels)
             {
@@ -59,6 +63,7 @@ namespace TreeProblems
 
             Console.ReadLine();
 
+            Console.WriteLine("****Zig Zag Order****");
             var zzlevels = ZigZagLevelTraversal.ZigzagLevelOrder(root);
             foreach (var level in zzlevels)
             {
@@ -68,6 +73,7 @@ namespace TreeProblems
             }
 
 
+            Console.WriteLine("\n****Vertical Order****");
             Dictionary<int, List<int>> verticalLevels = VerticalOrderTraversal.VerticalOrder(root);
             var keyList = new List<int>();
             foreach (var key in verticalLevels.Keys)
@@ -84,6 +90,17 @@ namespace TreeProblems
             }
             
            Console.ReadLine();
+            Console.WriteLine("\n****TopView ****");
+            var topView = BottomAndTopView.TopView(root);
+            foreach (var i in topView)
+                Console.Write(i + ", ");
+
+            Console.WriteLine("\n\n****BottomView ****");
+            var bottomView = BottomAndTopView.BottomView(root);
+            foreach (var i in bottomView)
+                Console.Write(i + " ");
+            Console.ReadLine();
+
         }
     }
 }

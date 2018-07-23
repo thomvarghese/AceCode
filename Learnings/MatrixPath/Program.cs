@@ -80,12 +80,12 @@ namespace MatrixPath
                 bool top = FindPath(matrix, output, sum - matrix[r,c], r - 1, c);
                 if (top) return top;
             }
-            if (c - 1 > -1 && output[1,c - 1] != 1)
+            if (c - 1 > -1 && output[r, c - 1] != 1)
             {
                 bool left = FindPath(matrix, output, sum - matrix[r,c], r, c - 1);
                 if (left) return left;
             }
-            if (c + 1 < matrix.GetLength(1) && output[r,c + 1] != 1)
+            if (c + 1 < matrix.GetLength(1) && output[r, c + 1] != 1)
             {
                 bool right = FindPath(matrix, output, sum - matrix[r,c], r, c + 1);
                 if (right) return right;
