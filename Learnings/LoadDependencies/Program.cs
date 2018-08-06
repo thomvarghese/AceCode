@@ -11,9 +11,18 @@ namespace LoadDependencies
             List<List<string>> list = new List<List<string>>()
             {
                 new List<string>(){"L1","L2","L3" },
-                new List<string>(){"L2","L4","L5", "L6" },
+                new List<string>(){"L2","L4","L5","L1","L6" },
                 new List<string>(){"L5","L6","L3" }
             };
+
+            foreach (var lib in list)
+            {
+                foreach (var v in lib)
+                    Console.Write(v + "  ");
+                Console.WriteLine();
+            }
+
+            Console.ReadLine();
 
             var res = LoadDependency.LoadDependencies(list);
 
@@ -53,7 +62,13 @@ namespace LoadDependencies
 
             foreach (var node in graph.nodes)
             {
-                LoadDeps(node, result, allNodes);
+                if (LoadDeps(node, result, allNodes, new HashSet<Node>(), new HashSet<Node>()))
+                {
+                    Console.WriteLine("Cycle Detected for " + node.Name);
+                }
+                else
+                    Console.WriteLine("No Cycle Detected for" + node.Name);
+
             }
             return result;
         }
@@ -82,8 +97,15 @@ namespace LoadDependencies
             return graph;
         }
 
-        private static void LoadDeps(Node node, List<string> result, Dictionary<string, Node> allNodes)
+        private static bool LoadDeps(Node node, List<string> result, Dictionary<string, Node> allNodes,
+                                     HashSet<Node> visitedNodes, HashSet<Node> completedNodes)
         {
+            if (visitedNodes.Contains(node))
+            {
+                if(!completedNodes.Contains(node))
+                    return true;
+            }
+            visitedNodes.Add(node);
             if (node.Dependencies.Any())
             {
                 foreach (var dep in node.Dependencies)
@@ -91,15 +113,22 @@ namespace LoadDependencies
                     var dependentNode = allNodes[dep];
                     if (!result.Contains(dependentNode.Name))
                     {
-                        LoadDeps(dependentNode, result, allNodes);
+                        var hasCycle = LoadDeps(dependentNode, result, allNodes, visitedNodes, completedNodes);
+                        if (hasCycle)
+                            return true;
                     }
                 }
             }
+
             if (!result.Contains(node.Name))
                 result.Add(node.Name);
+
+            completedNodes.Add(node);
+            return false;
         }
 
-        private static bool HasCycleDfs(Node node, Dictionary<string, Node> allNodes, HashSet<Node> visitedNodes, HashSet<Node> completedNodes)
+        private static bool HasCycleDfs(Node node, Dictionary<string, Node> allNodes, 
+                                        HashSet<Node> visitedNodes, HashSet<Node> completedNodes)
         {
 
             if (visitedNodes.Contains(node))

@@ -42,11 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinaryTreePaths.cs" />
     <Compile Include="BottomAndTopView.cs" />
     <Compile Include="BSTProblems.cs" />
     <Compile Include="BuildTreeFromInAndPostOrder.cs" />
     <Compile Include="BuildTreeFromInAndPreOrder.cs" />
     <Compile Include="IsBalancedTree.cs" />
+    <Compile Include="LowestCommonAncestor.cs" />
     <Compile Include="MaxAndMinDepths.cs" />
     <Compile Include="MirrorOfBinaryTree.cs" />
     <Compile Include="Program.cs" />

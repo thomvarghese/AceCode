@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3655629-545C-40AF-B2AB-7DF9388255FD}</ProjectGuid>
+    <ProjectGuid>{E578B3E2-DAD5-48FC-BC84-CE28A05A9771}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MedianOfTwoSortedArrays</RootNamespace>
-    <AssemblyName>MedianOfTwoSortedArrays</AssemblyName>
+    <RootNamespace>NQueens</RootNamespace>
+    <AssemblyName>NQueens</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MedianFinder.cs" />
+    <Compile Include="NQueens.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
