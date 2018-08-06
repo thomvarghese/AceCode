@@ -45,54 +45,5 @@ namespace MatrixPath
         
     
 
-    public static class SumInMatrix
-    {           
-
-        public static void PrintMatrix(int[,] matrix)
-        {
-            for (int i = 0; i < matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                    Console.Write(matrix[i, j] + " ");
-                Console.WriteLine();
-            }
-        }
-        public static bool FindPath(int[,] matrix, int[,] output, int sum, int r, int c)
-        {
-            Console.WriteLine("Row: " + r + ", Col: " + c + " Target: " + sum);
-            output[r,c] = 1;
-            if (sum - matrix[r,c] == 0)
-            {
-                return true;
-            }
-            else if (sum - matrix[r,c] < 0){
-                output[r,c] = 0;
-                return false;
-            }
-
-            if (r + 1 < matrix.GetLength(0) && output[r + 1, c] != 1)
-            {
-                bool bottom = FindPath(matrix, output, sum - matrix[r,c], r + 1, c);
-                if (bottom) return bottom;
-            }
-            if (r - 1 > -1 && output[r - 1, c] != 1)
-            {
-                bool top = FindPath(matrix, output, sum - matrix[r,c], r - 1, c);
-                if (top) return top;
-            }
-            if (c - 1 > -1 && output[r, c - 1] != 1)
-            {
-                bool left = FindPath(matrix, output, sum - matrix[r,c], r, c - 1);
-                if (left) return left;
-            }
-            if (c + 1 < matrix.GetLength(1) && output[r, c + 1] != 1)
-            {
-                bool right = FindPath(matrix, output, sum - matrix[r,c], r, c + 1);
-                if (right) return right;
-            }
-
-            output[r,c] = 0;
-            return false;
-        }
-    }
+    
 }

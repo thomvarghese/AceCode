@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EDF0FF43-45E5-4D7B-9150-5EB61D27B280}</ProjectGuid>
+    <ProjectGuid>{C3655629-545C-40AF-B2AB-7DF9388255FD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TreeProblems</RootNamespace>
-    <AssemblyName>TreeProblems</AssemblyName>
+    <RootNamespace>MedianOfTwoSortedArrays</RootNamespace>
+    <AssemblyName>MedianOfTwoSortedArrays</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,22 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BottomAndTopView.cs" />
-    <Compile Include="BSTProblems.cs" />
-    <Compile Include="BuildTreeFromInAndPostOrder.cs" />
-    <Compile Include="BuildTreeFromInAndPreOrder.cs" />
-    <Compile Include="IsBalancedTree.cs" />
-    <Compile Include="MaxAndMinDepths.cs" />
-    <Compile Include="MirrorOfBinaryTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LevelOrderTraversal.cs" />
-    <Compile Include="Traversals.cs" />
-    <Compile Include="TreeNode.cs" />
-    <Compile Include="TreeSideView.cs" />
-    <Compile Include="VerticalOrderTraversal.cs" />
-    <Compile Include="WidthOfBinaryTree.cs" />
-    <Compile Include="ZigZagLevelTraversal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

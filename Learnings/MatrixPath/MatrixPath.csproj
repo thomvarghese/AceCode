@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SumInMatrix.cs" />
+    <Compile Include="UniquePaths.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
