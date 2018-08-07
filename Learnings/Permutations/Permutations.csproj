@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EDF0FF43-45E5-4D7B-9150-5EB61D27B280}</ProjectGuid>
+    <ProjectGuid>{98DA6E24-EEEA-4CA3-9733-FEC94C3FB30B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TreeProblems</RootNamespace>
-    <AssemblyName>TreeProblems</AssemblyName>
+    <RootNamespace>Permutations</RootNamespace>
+    <AssemblyName>Permutations</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,24 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinaryTreePaths.cs" />
-    <Compile Include="BottomAndTopView.cs" />
-    <Compile Include="BSTProblems.cs" />
-    <Compile Include="BuildTreeFromInAndPostOrder.cs" />
-    <Compile Include="BuildTreeFromInAndPreOrder.cs" />
-    <Compile Include="IsBalancedTree.cs" />
-    <Compile Include="LowestCommonAncestor.cs" />
-    <Compile Include="MaxAndMinDepths.cs" />
-    <Compile Include="MirrorOfBinaryTree.cs" />
+    <Compile Include="Perms.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LevelOrderTraversal.cs" />
-    <Compile Include="Traversals.cs" />
-    <Compile Include="TreeNode.cs" />
-    <Compile Include="TreeSideView.cs" />
-    <Compile Include="VerticalOrderTraversal.cs" />
-    <Compile Include="WidthOfBinaryTree.cs" />
-    <Compile Include="ZigZagLevelTraversal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

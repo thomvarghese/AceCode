@@ -15,10 +15,7 @@ namespace TreeProblems
         private static TreeNode VerticalOrder(TreeNode root, int level, Dictionary<int, List<int>> verticalMap)
         {
             if (root == null) return null;
-            //recursively go the leftmost while substracting 1 as we move each level
-            TreeNode x = VerticalOrder(root.left, --level, verticalMap);
-            if (x == null) level++; // ie we are at extreme left
-            //store the node value to a hastable
+
             if (verticalMap.ContainsKey(level))
             {
                 verticalMap[level].Add(root.val);
@@ -31,6 +28,11 @@ namespace TreeProblems
             {
                 verticalMap.Add(level, new List<int> { root.val });
             }
+            //recursively go the leftmost while substracting 1 as we move each level
+            TreeNode x = VerticalOrder(root.left, --level, verticalMap);
+            if (x == null) level++; // ie we are at extreme left
+            //store the node value to a hastable
+            
             return VerticalOrder(root.right, ++level, verticalMap);
         }
     }
