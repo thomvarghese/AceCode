@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NQueens", "NQueens\NQueens.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BipartiteGraphProblem", "BipartiteGraphProblem\BipartiteGraphProblem.csproj", "{CEF2B8A9-A649-4245-BF8C-93EFE4500D94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpressions", "MathExpressions\MathExpressions.csproj", "{D51C6813-D6CD-489A-9348-7B414DEA4AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{CEF2B8A9-A649-4245-BF8C-93EFE4500D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEF2B8A9-A649-4245-BF8C-93EFE4500D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEF2B8A9-A649-4245-BF8C-93EFE4500D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D51C6813-D6CD-489A-9348-7B414DEA4AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D51C6813-D6CD-489A-9348-7B414DEA4AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D51C6813-D6CD-489A-9348-7B414DEA4AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D51C6813-D6CD-489A-9348-7B414DEA4AE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
