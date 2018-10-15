@@ -101,6 +101,34 @@ namespace TreeProblems
                 Console.Write(i + " ");
             Console.ReadLine();
 
+
+            Console.WriteLine("\n\n****Closest Leaf to Target ****");
+            /*Diagram of binary tree:
+                     1
+                    / \
+                   2   3
+                  /
+                 4
+                /
+               5
+              /
+             6
+            Input: 2
+            Output: 3
+            */
+
+            TreeNode r = new TreeNode(1);
+            TreeNode t2 = new TreeNode(2);
+            TreeNode t3 = new TreeNode(3);
+            r.left = t2; r.right = t3;
+            TreeNode t4 = new TreeNode(4);
+            TreeNode t5 = new TreeNode(5);
+            TreeNode t6 = new TreeNode(6);
+            t2.left = t4; t4.left = t5; t5.left = t6;
+
+            var closestleaft = ClosestLeafToTarget.ClosestLeaf(r, 2);
+            Console.ReadLine();
+
         }
     }
 }

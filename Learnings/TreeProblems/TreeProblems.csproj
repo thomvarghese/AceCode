@@ -47,6 +47,7 @@
     <Compile Include="BSTProblems.cs" />
     <Compile Include="BuildTreeFromInAndPostOrder.cs" />
     <Compile Include="BuildTreeFromInAndPreOrder.cs" />
+    <Compile Include="ClosestLeafToTarget.cs" />
     <Compile Include="IsBalancedTree.cs" />
     <Compile Include="LowestCommonAncestor.cs" />
     <Compile Include="MaxAndMinDepths.cs" />
