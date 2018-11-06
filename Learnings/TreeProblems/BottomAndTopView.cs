@@ -5,7 +5,7 @@ namespace TreeProblems
 {
     public static class BottomAndTopView
     {
-        //Bootom and top view lists can be created by doing a vertical order traversal(and level order)
+        //Bottom and top view lists can be created by doing a vertical order traversal(and level order)
         //From the vertical list, take the first ones for the top view and the last ones for the bottom view
         public static List<int> TopView(TreeNode root)
         {

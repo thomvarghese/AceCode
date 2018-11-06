@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BipartiteGraphProblem", "Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpressions", "MathExpressions\MathExpressions.csproj", "{D51C6813-D6CD-489A-9348-7B414DEA4AE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoComplete", "AutoComplete\AutoComplete.csproj", "{60DD4496-4063-4276-B501-823714B4E0B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{D51C6813-D6CD-489A-9348-7B414DEA4AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D51C6813-D6CD-489A-9348-7B414DEA4AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D51C6813-D6CD-489A-9348-7B414DEA4AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DD4496-4063-4276-B501-823714B4E0B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DD4496-4063-4276-B501-823714B4E0B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DD4496-4063-4276-B501-823714B4E0B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DD4496-4063-4276-B501-823714B4E0B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

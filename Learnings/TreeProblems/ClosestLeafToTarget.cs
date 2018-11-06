@@ -57,10 +57,16 @@ namespace TreeProblems
         {
             if (root == null || target == 0) return null;
             var map = new Dictionary<TreeNode, List<TreeNode>>();
-            CreateList(map, root, null);
+
+            //Do a dfs and create the map of neighbors
+            CreateMapOfNeighbors(map, root, null);
+
+            //Now perfrom a BFS - using queue - from the node where we want to find the closest leaf. 
+            //Also maintain a visited map/set
             Queue<TreeNode> queue = new Queue<TreeNode>();
             HashSet<TreeNode> visited = new HashSet<TreeNode>();
 
+            //find the node to start the BFS
             foreach (TreeNode node in map.Keys)
             {
                 if (node.val == target)
@@ -71,6 +77,7 @@ namespace TreeProblems
                 }
             }
 
+            //While doing the BFS, check if count of neighbors is <= 1, if so its a leaf 
             while (queue.Count > 0)
             {
                 var n = queue.Dequeue();
@@ -91,10 +98,13 @@ namespace TreeProblems
             }
             return null;
         }
-        private static void CreateList(Dictionary<TreeNode, List<TreeNode>> dict, TreeNode node, TreeNode parent)
+        private static void CreateMapOfNeighbors(Dictionary<TreeNode, List<TreeNode>> dict, TreeNode node, TreeNode parent)
         {
             if (node != null)
             {
+                //Parent and 2 children are the possible neighbors - parent will be null for the root
+                //So add current node as the neighbor to parent and add parent as the neighbor to current node
+                //Perform that with a DFS - recursively.
                 if (!dict.ContainsKey(node))
                     dict.Add(node, new List<TreeNode>());
                 if (parent != null && !dict.ContainsKey(parent))
@@ -105,9 +115,9 @@ namespace TreeProblems
                     dict[parent].Add(node);
 
                 if (node.left != null)
-                    CreateList(dict, node.left, node);
+                    CreateMapOfNeighbors(dict, node.left, node);
                 if (node.right != null)
-                    CreateList(dict, node.right, node);
+                    CreateMapOfNeighbors(dict, node.right, node);
             }
         }
 

@@ -11,14 +11,14 @@ namespace MathExpressions
             //Input: "(1+(4+5+2)-3)+(6+8)"
             //Output: 23
 
-            //var res = BasicCalculator.CalculateAddAndSubExp("2-1+1");
-            //Console.WriteLine(res);
-            //res = BasicCalculator.CalculateAddAndSubExp("(1+(4+5+2)-3)+(6+8)");
-            //Console.WriteLine(res);
-            //res = BasicCalculator.CalculateAddAndSubExp("1-(5)");
-            //Console.WriteLine(res);
+            var res = BasicCalculator.CalculateAddAndSubExp("2-1+1");
+            Console.WriteLine(res);
+            res = BasicCalculator.CalculateAddAndSubExp("(1+(4+5+2)-3)+(6+8)");
+            Console.WriteLine(res);
+            res = BasicCalculator.CalculateAddAndSubExp("1-(5)");
+            Console.WriteLine(res);
 
-            int res = BasicCalculator.CalculateMuxAndDivExp("12-3*4");
+            res = BasicCalculator.CalculateMuxAndDivExp("12-3*4");
             Console.WriteLine(res);
 
             Console.ReadLine();

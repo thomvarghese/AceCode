@@ -127,6 +127,7 @@ namespace TreeProblems
             t2.left = t4; t4.left = t5; t5.left = t6;
 
             var closestleaft = ClosestLeafToTarget.ClosestLeaf(r, 2);
+            Console.WriteLine("Closest Leaf is " + closestleaft);
             Console.ReadLine();
 
         }

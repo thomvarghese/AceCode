@@ -5,7 +5,10 @@ namespace MathExpressions
 {
     public class BasicCalculator
     {
-
+        //Implement a basic calculator to evaluate a simple expression string.
+        //The expression string may contain open(and closing parentheses ), the plus +or minus sign -, non - negative integers and empty spaces .
+        //Input: "(1+(4+5+2)-3)+(6+8)"
+        //Output: 23
         public static int CalculateAddAndSubExp(string s)
         {
             int result = 0;
@@ -14,6 +17,7 @@ namespace MathExpressions
             Stack<int> stack = new Stack<int>();
             for (int i = 0; i < s.Length; i++)
             {
+                // find the number by verifying the digit
                 if (Char.IsDigit(s[i]))
                 {
                     num = s[i] - '0';
@@ -22,7 +26,7 @@ namespace MathExpressions
                         num = num * 10 + (s[i + 1] - '0');
                         i++;
                     }
-                    result = result + ( num * sign);
+                    result = result + ( num * sign); //make the number as +ve or -ve
                 }
                 else if (s[i] == '+')
                 {
@@ -32,14 +36,14 @@ namespace MathExpressions
                 {
                     sign = -1;
                 }
-                else if (s[i] == '(')
+                else if (s[i] == '(') // When a start ( encountered, push the current result and the sign to stack
                 {
                     stack.Push(result);
                     stack.Push(sign);
                     result = 0;
                     sign = 1;
                 }
-                else if (s[i] == ')')
+                else if (s[i] == ')') // When ) encountered, perform the operation on the current result with the value from stack
                 {
                     result =  result * stack.Pop() + stack.Pop();
                 }
