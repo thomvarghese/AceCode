@@ -6,6 +6,30 @@ namespace TreeProblems
 
     public class TreeSideView
     {
+        public static List<int> RightSideViewUsingLevelOrderTraversal(TreeNode root)
+        {
+            List<int> result = new List<int>();
+            if (root == null) return result;
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while(queue.Count > 0)
+            {
+                int size = queue.Count;
+                for (int i = 0; i < size; i++)
+                {
+                    TreeNode cur = queue.Dequeue();
+                    if (i == 0)
+                        result.Add(cur.val);
+                    if (cur.right != null)
+                        queue.Enqueue(cur.right);
+                    if (cur.left != null)
+                        queue.Enqueue(cur.left);
+                    //For the left side view, just enqueue the left child first.
+                }
+            }
+            return result;
+        }
+
 
         public static List<int> RightSideViewDfs(TreeNode root)
         {

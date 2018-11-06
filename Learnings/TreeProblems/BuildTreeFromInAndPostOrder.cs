@@ -16,13 +16,13 @@ namespace TreeProblems
                 inOrderIndices.Add(inorder[i], i);
 
             return BuildTree(inorder, 0, inorder.Length - 1,
-                                                    postorder, 0, postorder.Length - 1, inOrderIndices);
+                             postorder, 0, postorder.Length - 1, inOrderIndices);
 
         }
 
         private TreeNode BuildTree(int[] inorder, int inStart, int inEnd,
-                                                          int[] postorder, int postStart, int postEnd,
-                                                          Dictionary<int, int> inOrderIndices)
+                                   int[] postorder, int postStart, int postEnd,
+                                   Dictionary<int, int> inOrderIndices)
         {
             if (inStart > inEnd || postStart > postEnd)
                 return null;
